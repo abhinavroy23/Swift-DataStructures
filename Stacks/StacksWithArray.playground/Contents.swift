@@ -1,5 +1,5 @@
 // Copyright 2020 Abhinav Roy, All rights reserved.
-// Implementation of [STACKS as Array] in Swift and all basic operations
+// Implementation of [STACKS as Array] in Swift with all basic operations
 import Foundation
 
 //
