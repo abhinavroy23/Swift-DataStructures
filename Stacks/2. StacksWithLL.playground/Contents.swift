@@ -15,24 +15,26 @@ import Foundation
 //  Push/Pop both happens at one end
 //  Operations: Push, Pop, peek/top, isEmpty
 
-class Node<T>{
-    var data : T?
-    var next : Node<T>?
-    
-    init(data: T, next: Node<T>?) {
-        self.data = data
-        self.next = next
-    }
-}
-class LinkedList<T>{
-    var root : Node<T>?
-    
-    init(root: Node<T>?) {
-        self.root = root
-    }
-}
 
 class Stacks<T>{
+    
+    class Node<T>{
+        var data : T?
+        var next : Node<T>?
+        
+        init(data: T, next: Node<T>?) {
+            self.data = data
+            self.next = next
+        }
+    }
+    class LinkedList<T>{
+        var root : Node<T>?
+        
+        init(root: Node<T>?) {
+            self.root = root
+        }
+    }
+    
     private var linkedList : LinkedList<T> = LinkedList<T>(root: nil)
     
     // Push Operation: Push element at the top
