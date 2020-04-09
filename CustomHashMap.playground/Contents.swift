@@ -51,7 +51,6 @@ class CustomhashMap<T: Hashable, U>{
     
     func value(forKey key: T) -> U?{
         let index = bucketIndex(forKey: key)
-        var bucketIndex : Int?
         for hashElement in bucket[index]{
             if hashElement.key == key{
                 return hashElement.value
