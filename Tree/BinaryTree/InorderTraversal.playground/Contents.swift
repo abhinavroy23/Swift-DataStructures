@@ -60,7 +60,7 @@ node4.left = node9
 
 
 // DFS: Inorder traversal --> L, Ro, R
-func inorder(_ root : Node<Int>?){
+func inorder(_ root : Node<Int>?){ // Comlexity - O(n)
     guard let root = root else{
         return
     }
@@ -74,6 +74,6 @@ func inorder(_ root : Node<Int>?){
         inorder(right)
     }
 }
-print("Inorder:", separator: "", terminator: " ")
+print("Inorder O(n):", separator: "", terminator: " ")
 inorder(tree.root)
 print()

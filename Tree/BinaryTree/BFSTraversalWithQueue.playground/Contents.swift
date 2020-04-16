@@ -59,8 +59,8 @@ node3.right = node8
 node4.left = node9
 
 // BFS: Level order traversal using Queue
-func levelOrderTraversalWithQueue(_ root : Node<Int>?){
-    class BFSQueue<T>{
+func levelOrderTraversalWithQueue(_ root : Node<Int>?){ // Complexity - O(n)
+    class BFSQueue<T>{ // FIFO
         private var array : [Node<T>] = []
         
         func push(_ node : Node<T>){
@@ -102,7 +102,6 @@ func levelOrderTraversalWithQueue(_ root : Node<Int>?){
         }
     }
 }
-
-print("BFS with Queue:", separator: "", terminator: " ")
+print("BFS with Queue O(n):", separator: "", terminator: " ")
 levelOrderTraversalWithQueue(tree.root)
 print()

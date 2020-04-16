@@ -59,7 +59,7 @@ node3.right = node8
 node4.left = node9
 
 // DFS: Postorder traversal --> L , R, Ro
-func postorder(_ root : Node<Int>?){
+func postorder(_ root : Node<Int>?){ // Comlexity - O(n)
     guard let root = root else{
         return
     }
@@ -73,7 +73,6 @@ func postorder(_ root : Node<Int>?){
         print(data, separator: "", terminator: " ")
     }
 }
-
-print("Postorder:", separator: "", terminator: " ")
+print("Postorder O(n):", separator: "", terminator: " ")
 postorder(tree.root)
 print()

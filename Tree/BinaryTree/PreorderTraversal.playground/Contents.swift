@@ -59,7 +59,7 @@ node3.right = node8
 node4.left = node9
 
 // DFS: Preorder traversal --> Ro, L , R
-func preorder(_ root : Node<Int>?){
+func preorder(_ root : Node<Int>?){ // Comlexity - O(n)
     guard let root = root else{
         return
     }
@@ -73,7 +73,6 @@ func preorder(_ root : Node<Int>?){
         preorder(right)
     }
 }
-
-print("Preorder:", separator: "", terminator: " ")
+print("Preorder O(n):", separator: "", terminator: " ")
 preorder(tree.root)
 print()

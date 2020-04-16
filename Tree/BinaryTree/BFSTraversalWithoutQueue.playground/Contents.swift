@@ -59,22 +59,7 @@ node3.right = node8
 node4.left = node9
 
 // BFS: Level order traversal without using Queue
-func levelOrderTraversalWithoutQueue(_ root : Node<Int>?){
-    
-    //obtain height of tree
-    func getHeightOfTree(_ root : Node<Int>?) -> Int{
-        guard let root = root else{
-            return 0
-        }
-        let lHeight = getHeightOfTree(root.left)
-        let rHeight = getHeightOfTree(root.right)
-        
-        if lHeight > rHeight{
-            return lHeight + 1
-        }else{
-            return rHeight + 1
-        }
-    }
+func levelOrderTraversalWithoutQueue(_ root : Node<Int>?){ // Complexity - O(n^2)
     
     func printNodes(atLevel level: Int,_ root : Node<Int>?){
         guard let root = root else{
@@ -95,7 +80,14 @@ func levelOrderTraversalWithoutQueue(_ root : Node<Int>?){
         printNodes(atLevel: i, root)
     }
 }
-
-print("BFS without Queue:", separator: "", terminator: " ")
+print("BFS without Queue O(n^2):", separator: "", terminator: " ")
 levelOrderTraversalWithoutQueue(tree.root)
 print()
+
+//Obtain height of tree
+func getHeightOfTree(_ root : Node<Int>?) -> Int{ // Complexity - O(n)
+    guard let root = root else{
+        return 0
+    }
+    return 1 + max(getHeightOfTree(root.left),getHeightOfTree(root.right))
+}
