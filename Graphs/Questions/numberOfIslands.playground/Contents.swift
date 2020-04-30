@@ -50,8 +50,8 @@ func DFS(_ grid : [[Int]],_ row : Int,_ col : Int,_ visited : inout [[Bool]]){
     //var adjRows : [Int] = [-1,-1,-1,0,0,1,1,1]
     //var adjCols : [Int] = [-1,0,1,-1,1,-1,0,1]
     
-    var adjRows : [Int] = [-1,0,0,1]
-    var adjCols : [Int] = [0,-1,1,0]
+    let adjRows : [Int] = [-1,0,0,1]
+    let adjCols : [Int] = [0,-1,1,0]
     
     visited[row][col] = true
     

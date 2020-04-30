@@ -22,13 +22,13 @@ class BinaryTree<T>{
 
 //Sample Tree
 /*
- 0
- /     \
- 1        2
- /   \     /   \
- 3     4   5     6
- / \   /
- 7   8 9
+              0
+           /     \
+         1         2
+       /   \     /   \
+      3     4   5     6
+     / \   /
+    7   8 9
  
  Inorder - 7 3 8 1 9 4 0 5 2 6
  Preorder - 0 1 3 7 8 4 9 2 5 6
@@ -85,7 +85,7 @@ levelOrderTraversalWithoutQueue(tree.root)
 print()
 
 //Obtain height of tree
-func getHeightOfTree(_ root : Node<Int>?) -> Int{ // Complexity - O(n)
+func getHeightOfTree(_ root : Node<Int>?) -> Int{ // Complexity - worst case O(n), best case O(logn)
     guard let root = root else{
         return 0
     }

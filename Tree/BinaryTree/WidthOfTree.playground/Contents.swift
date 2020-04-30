@@ -131,13 +131,13 @@ func widthOfTreeUsingQueue(_ root : Node<Int>?) -> Int{
     guard let root = root else{
         return 0
     }
-    var queue : BFSQueue<Int> = BFSQueue<Int>()
+    let queue : BFSQueue<Int> = BFSQueue<Int>()
     
     queue.push(root)
     var maxWidth = 1
     
     while !queue.isEmpty() {
-        for i in 0..<queue.size(){
+        for _ in 0..<queue.size(){
             if let node = queue.pop(){
                 if let left = node.left{
                     queue.push(left)
